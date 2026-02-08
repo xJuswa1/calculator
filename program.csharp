@@ -1,0 +1,39 @@
+using System;
+
+public class program
+{
+    public static void Main(string[] args)
+    {
+        while(true){
+            Console.WriteLine("Enter the first number: ");
+            int n1 = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Enter second number: ");
+            int n2 = Convert.ToInt32(Console.ReadLine());
+            
+            Console.WriteLine("Select an operation:  ");
+            Console.WriteLine("+ , - , / , * , % ,");
+            Console.WriteLine("Enter = to exit. ");
+            String op = Console.ReadLine();
+            
+            if(op != "+" && op != "-" && op != "/" && op != "*" && op != "="&& op != "%" )
+            {
+                Console.WriteLine("Invalid Input!!!!!");
+            }
+            else 
+            {
+                double? result = Calculator.Calculate(n1,n2,op);
+                
+                if(result != null) 
+                {
+                    Console.WriteLine("Result: " + result);
+                }
+                  
+                if(operation == "=")
+                {
+                    break;
+                }
+            }
+            Console.WriteLine();
+        }
+    }
+}
